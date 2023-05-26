@@ -6,7 +6,11 @@
     "start": "cross-env webpack-dev-server --mode=development",
     "build": "cross-env webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
-    "preview": "serve --no-clipboard --single --listen 8080 dist"
+    "format": "prettier ./src --write",
+    "preview": "serve --no-clipboard --single --listen 8080 dist",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "check": "npm run lint:fix && npm run build && npm run format:check"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
@@ -21,6 +25,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^8.41.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "file-loader": "^5.0.2",
     "prettier": "^1.19.1",

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
 import Person from '../components/Person';
+import PropTypes from 'prop-types';
 
 const ShowPerson = ({people}) => {
   const params = useParams();
@@ -12,6 +13,10 @@ const ShowPerson = ({people}) => {
       {person ? <Person person={person} /> : <h1>Person not found :(</h1>}
     </div>
   );
+};
+
+ShowPerson.propTypes = {
+  people: PropTypes.node.isRequired,
 };
 
 export default ShowPerson;

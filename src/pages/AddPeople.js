@@ -7,6 +7,7 @@ import React, {
   useState,
 } from 'react';
 import Input from '../components/Input';
+import PropTypes from 'prop-types';
 
 const INITIAL = {
   firstname: 'John',
@@ -104,6 +105,11 @@ const Form = ({defaultValue = INITIAL}) => {
     </>
   );
 };
+
+Form.propTypes = {
+  defaultValue: PropTypes.node.isRequired,
+};
+
 
 const DisplayData = () => {
   const {result} = useContext(AddPeopleContext);

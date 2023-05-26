@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Discover.css';
 
 import Person from '../components/Person';
+import PropTypes from 'prop-types';
 
 const Fab = ({kind, large, onClick}) => (
   <button
@@ -13,6 +14,13 @@ const Fab = ({kind, large, onClick}) => (
     <i className="material-icons">{kind}</i>
   </button>
 );
+
+Fab.propTypes = {
+  kind: PropTypes.node.isRequired,
+  large: PropTypes.string.isRequired,
+  onClick: PropTypes.object.isRequired,
+};
+
 
 const succ = (current, min, max) => (current === max ? min : current + 1);
 const pred = (current, min, max) => (current === min ? max : current - 1);
@@ -57,6 +65,10 @@ const Discover = ({people}) => {
       </div>
     </div>
   );
+};
+
+Discover.propTypes = {
+  people: PropTypes.node.isRequired,
 };
 
 export default Discover;

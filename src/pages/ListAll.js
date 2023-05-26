@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Person from '../components/Person';
 import SearchInput from '../components/SearchInput';
+import PropTypes from 'prop-types';
 
 const filterPerson = (search) => {
   const re = new RegExp(search, 'i');
@@ -30,5 +31,10 @@ const ListAll = ({people}) => {
     </>
   );
 };
+
+ListAll.propTypes = {
+  people: PropTypes.node.isRequired,
+};
+
 
 export default ListAll;
