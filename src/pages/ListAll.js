@@ -36,5 +36,4 @@ ListAll.propTypes = {
   people: PropTypes.node.isRequired,
 };
 
-
 export default ListAll;

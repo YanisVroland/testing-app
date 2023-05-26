@@ -110,7 +110,6 @@ Form.propTypes = {
   defaultValue: PropTypes.node.isRequired,
 };
 
-
 const DisplayData = () => {
   const {result} = useContext(AddPeopleContext);
   return (

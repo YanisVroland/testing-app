@@ -7,9 +7,8 @@ import PropTypes from 'prop-types';
 const Fab = ({kind, large, onClick}) => (
   <button
     onClick={onClick}
-    className={`btn-default btn-floating waves-effect waves-light ${
-      large && 'btn-large'
-    }`}
+    className={`btn-default btn-floating waves-effect waves-light ${large &&
+      'btn-large'}`}
   >
     <i className="material-icons">{kind}</i>
   </button>
@@ -20,7 +19,6 @@ Fab.propTypes = {
   large: PropTypes.string.isRequired,
   onClick: PropTypes.object.isRequired,
 };
-
 
 const succ = (current, min, max) => (current === max ? min : current + 1);
 const pred = (current, min, max) => (current === min ? max : current - 1);

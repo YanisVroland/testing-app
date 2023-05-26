@@ -13,7 +13,7 @@ Card.propTypes = {
 };
 
 const Avatar = ({photoUrl, altText}) => (
-  <img className="card-avatar" src={photoUrl} alt={altText}/>
+  <img className="card-avatar" src={photoUrl} alt={altText} />
 );
 
 Avatar.propTypes = {
@@ -27,7 +27,6 @@ const Title = ({mainTitle, subTitle}) => (
     <div className="card-subtitle">{subTitle}</div>
   </div>
 );
-
 
 Title.propTypes = {
   mainTitle: PropTypes.node.isRequired,
@@ -48,7 +47,6 @@ Info.propTypes = {
   children: PropTypes.node.isRequired,
   desc: PropTypes.string.isRequired,
 };
-
 
 Card.Avatar = Avatar;
 Card.Title = Title;

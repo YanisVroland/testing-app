@@ -6,7 +6,7 @@
     "start": "cross-env webpack-dev-server --mode=development",
     "build": "cross-env webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
-    "format": "prettier ./src --write",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
     "preview": "serve --no-clipboard --single --listen 8080 dist",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
