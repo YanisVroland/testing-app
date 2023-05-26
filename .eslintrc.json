@@ -14,9 +14,9 @@
   "plugins": ["react"],
   "extends": [
     "eslint:recommended",
-    "eslint-config-prettier",
     "plugin:react/recommended",
-    "google"
+    "google",
+    "eslint-config-prettier"
   ],
   "rules": {
     "strict": ["error", "never"]
