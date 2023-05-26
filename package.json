@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode=development",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
+    "start": "cross-env webpack-dev-server --mode=development",
+    "build": "cross-env webpack --mode=production",
     "postbuild": "cp ./public/index.html ./dist/index.html",
     "preview": "serve --no-clipboard --single --listen 8080 dist"
   },
