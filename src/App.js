@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
-import "./App.css";
+import './App.css';
 
-import AppBar from "./components/AppBar";
-import Spinner from "./components/Spinner";
-import AddPeople from "./pages/AddPeople";
+import AppBar from './components/AppBar';
+import Spinner from './components/Spinner';
+import AddPeople from './pages/AddPeople';
 
-import Discover from "./pages/Discover";
-import ListAll from "./pages/ListAll";
-import ShowPerson from "./pages/ShowPerson";
+import Discover from './pages/Discover';
+import ListAll from './pages/ListAll';
+import ShowPerson from './pages/ShowPerson';
 
 const App = () => {
   const [statePeople, setStatePeople] = useState({
     isLoading: true,
-    people: []
+    people: [],
   });
-  const { isLoading, people } = statePeople;
+  const {isLoading, people} = statePeople;
 
   useEffect(() => {
     const fetchPeople = async () => {
       const data = await fetch(
-        "https://react-starter-api.vercel.app/api/people"
+          'https://react-starter-api.vercel.app/api/people',
       );
-      const { responseBody } = await data.json();
-      setStatePeople({ people: responseBody, isLoading: false });
+      const {responseBody} = await data.json();
+      setStatePeople({people: responseBody, isLoading: false});
     };
     fetchPeople();
   }, []);

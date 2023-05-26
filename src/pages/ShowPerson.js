@@ -1,8 +1,8 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import Person from "../components/Person";
+import React from 'react';
+import {useParams} from 'react-router-dom';
+import Person from '../components/Person';
 
-const ShowPerson = ({ people }) => {
+const ShowPerson = ({people}) => {
   const params = useParams();
 
   const person = people.find((person) => person.id === params.id);

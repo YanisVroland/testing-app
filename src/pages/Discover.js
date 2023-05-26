@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./Discover.css";
+import React, {useState, useEffect} from 'react';
+import './Discover.css';
 
-import Person from "../components/Person";
+import Person from '../components/Person';
 
-const Fab = ({ kind, large, onClick }) => (
+const Fab = ({kind, large, onClick}) => (
   <button
     onClick={onClick}
     className={`btn-default btn-floating waves-effect waves-light ${
-      large && "btn-large"
+      large && 'btn-large'
     }`}
   >
     <i className="material-icons">{kind}</i>
@@ -17,7 +17,7 @@ const Fab = ({ kind, large, onClick }) => (
 const succ = (current, min, max) => (current === max ? min : current + 1);
 const pred = (current, min, max) => (current === min ? max : current - 1);
 
-const Discover = ({ people }) => {
+const Discover = ({people}) => {
   const [current, setCurrent] = useState(0);
   const [isPlaying, setPlay] = useState(false);
 
